@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ros-humble-full:
+    build: ./
+    volumes:
+      - ./workspace:/home/user/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    tty: true
+    privileged: true
+    network_mode: "host"
+    ipc: host
+    pid: host
+    runtime: nvidia
+    environment:
+      - DISPLAY
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+
