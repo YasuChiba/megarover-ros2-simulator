@@ -1,0 +1,32 @@
+# build output
+build/
+install/
+log/
+
+# Python
+*.pyc
+__pycache__/
+
+# C++
+*.o
+*.a
+*.so
+*.lib
+*.dll
+*.exe
+*.d
+*.pdb
+
+# IDEs and editors
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+*.orig
+*.old
+*.tmp
+
+# Others
+*.log
+.DS_Store
