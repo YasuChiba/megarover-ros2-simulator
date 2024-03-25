@@ -22,10 +22,13 @@ RUN curl https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-ke
 
 # ROS2パッケージのインストール
 RUN export ROS_DISTRO=humble && \
-    apt-get install -y ros-humble-desktop \
+    apt update && \
+    apt-get install -y ros-humble-desktop-full \
     python3-colcon-common-extensions python3-rosdep python3-argcomplete
 
-RUN apt-get install -y ros-humble-gazebo-* ros-humble-turtlebot3 ros-humble-turtlebot3-msgs
+#RUN apt-get install -y ros-humble-gazebo-* ros-humble-turtlebot3 ros-humble-turtlebot3-msgs
+RUN apt update && \
+    apt install -y ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-ros-ign-gazebo ros-humble-ros-ign-bridge
 
 ARG USERNAME=user
 ARG GROUPNAME=user

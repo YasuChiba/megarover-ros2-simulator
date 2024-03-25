@@ -18,7 +18,6 @@ __pycache__/
 *.pdb
 
 # IDEs and editors
-.vscode/
 *.swp
 *.swo
 *.swn
