@@ -3,6 +3,10 @@
 
   <xacro:include filename="$(find megarover_description)/urdf/mega3_base_model.xacro" />
   <xacro:include filename="$(find megarover_description)/urdf/mega3.gazebo" />
+
+  <xacro:include filename="$(find megarover_description)/urdf/mega3_lidar.xacro" />
+  <xacro:include filename="$(find megarover_description)/urdf/mega3_lidar.gazebo" />
+
   <!-- OPTION: LRF TG30 -->
   <!-- <xacro:include filename="$(find vs_rover_options_description)/urdf/lrf/tg30_mega3.xacro" /> -->
   <!-- OPTION: bumper sensor -->

@@ -86,8 +86,16 @@ def generate_launch_description():
                 '/clock@rosgraph_msgs/msg/Clock[ignition.msgs.Clock',
                 # Joint states (IGN -> ROS2)
                 '/joint_states@sensor_msgs/msg/JointState[ignition.msgs.Model',
+
+                #'/scan@sensor_msgs/msg/LaserScan@ignition.msgs.LaserScan',
+                # /scan/points to PointCloud2
+                '/scan/points@sensor_msgs/msg/PointCloud2@ignition.msgs.PointCloudPacked',
+                # /imu to Imu
+                '/imu@sensor_msgs/msg/Imu@ignition.msgs.IMU'
                 ],
         remappings=[
+                ('/scan/points', '/livox/lidar'),
+                ('/imu', '/livox/imu'),
         ],
         output='screen'
     )
